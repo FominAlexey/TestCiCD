@@ -27,9 +27,9 @@ jobs:
           uses: actions/download-artifact@v3
           with:
             name: production-files
-            path: ./dist
+            path: ./build
         - name: Deploy to GitHub Pages
           uses: peaceiris/actions-gh-pages@v3
           with:
             github_token: ${{ secrets.TEST_SECRET }}
-            publish_dir: ./dist
+            publish_dir: ./build
