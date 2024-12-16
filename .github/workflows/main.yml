@@ -1,18 +1,15 @@
-stages:
-  - build
-  - test
+name: Node CI
 
-build:
-  image: node:18.17.1
-  stage: build
-  script:
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - build/
+on: push
 
-test:
-  stage: test
-  script:
-    - echo "Running tests"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Install 🔧
+        run: npm install
+
+      - name: Build 🏗️
+        run: npm run build
