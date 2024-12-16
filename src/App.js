@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const [image, setImage] = useState(null);
-  const [pdf, setPdf] = useState(null);
+  let pdf;
 
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);
