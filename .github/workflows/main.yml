@@ -1,0 +1,18 @@
+stages:
+  - build
+  - test
+
+build:
+  image: node:18.17.1
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+test:
+  stage: test
+  script:
+    - echo "Running tests"

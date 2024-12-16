@@ -1,0 +1,24 @@
+/* App.css */
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.App-header input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.App-header button {
+  margin-bottom: 20px;
+}
+
+.App-header a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.App-header a:hover {
+  color: #23527c;
+}
