@@ -10,11 +10,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install 🔧
+      - name: Install 
         run: npm install
 
-      - name: Build 🏗️
+      - name: Build 
         run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-files
+          path: ./build
 
   # Deploy Job
   deploy:
